@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: 平凡 | 4amv</title>
+  <title>盒模型总结 | 4amv</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -181,69 +181,56 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/04/23/post16/">网易云评论感触</a></h4>
-                            
-                            <p><time datetime="2018-04-22T16:00:00.000Z"><a href="/2018/04/23/post16/">2018-04-23</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-04-27T16:00:00.000Z" itemprop="datePublished">
+          2018-04-28
+      </time>
+    
+    
+    | 
+    <a href='/tags/ife/'>ife</a>
+    
+    
+</span>
+                <h1>盒模型总结</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>昨天要赶凌晨的火车，在宿管大叔关门之前离开学校去了车站，然后作业没写完，博客也忘了更新，只好在29日悄悄补上，嘻嘻XD</p>
+<p>这两天的内容是在一个html文件的基础上，创建三个css文件，实现三种不同的布局，第一种就是简单的排版，没什么好说的，第二个是一个两栏等高排版，有一个好玩的技巧，就是设置左栏<code>margin-bottom: -9999px;</code> <code>padding-bottom: 9999px;</code>正负抵消，对布局层并无影响，但却带来了我们想要的东西——视觉层多了9999px高度的可使用的背景色，但是，9999px太大啦，所以可以配合负级 <code>overflow: hidden;</code>把多出来的 色块背景隐藏掉，于是实现了视觉上的等高布局效果。</p>
+<p>这个方法其实昨天去车站前还没想到，在火车上看《css世界》的时候无意中看到这个方法，确实好用：）</p>
+<p>第三个内容，就是实现一个类似表格的布局，因为html文件不变，所以老师刻意不让我们使用表格元素去布局，难点不多，主要是细节上的处理。其中比较有趣的一个属性就是<code>box-sizing: border-box</code>这个属性特别人性化，让你可以不去考虑有关padding和margin的尺寸计算，只要设定好weight，那么这个盒子最终的大小只会是weight的大小，之后的padding，只会影响到content的大小，实在是懒癌首选! (心里猜测一下，可能就是某个程序员的懒惰促使他创造了这个灵性的<code>box-sizing</code>！ (*≧▽≦) </p>
+<p>交完作业之后，看了看其他同学的作业，发现自己在语义化和代码的简洁程度上还要努力。</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>hi , Daling。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2018/04/28/post22/" style="float: left;">
+        ← 心灵无隙
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/04/27/post20/">
+        胖次的正确食用方式 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 <footer>
