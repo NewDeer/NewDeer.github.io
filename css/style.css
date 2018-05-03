@@ -299,7 +299,7 @@ input#delivery {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: 100% 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
 	height: 100%;
