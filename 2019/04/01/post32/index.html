@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: 何谓优秀 | 4amv</title>
+  <title>iOS表单弹出键盘后空白不恢复 | 4amv</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -183,60 +183,47 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.png) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/04/26/post19/">执行力</a></h4>
-                            
-                            <p><time datetime="2018-04-25T16:00:00.000Z"><a href="/2018/04/26/post19/">2018-04-26</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-03-31T16:00:00.000Z" itemprop="datePublished">
+          2019-04-01
+      </time>
+    
+</span>
+                <h1>iOS表单弹出键盘后空白不恢复</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>阳光明媚的周一，阳光明媚的早晨，早早的来到公司，准备新的一周不做懒狗，打开Tb准备安排这周的工作计划。</p>
+<p>然后漂亮的运营小姐姐微信弹了我好几条消息，还没仔细看，她就略显慌张的来到了我的工位旁边，说我做的页面出现了问题，很多客户反映问卷无法点击。</p>
+<p>我心想这是一个很早以前就做好的页面，并且上线这么久没出现过情况，为什么突然出现这么大的bug？微信内置调试起来比较困难，便找了一个线上结构差不多的页面试着复现这个bug。</p>
+<p>在仔细的排查下，终于定位到了bug的原因，不知道什么时候开始，当页面的表单点击输入后，软键盘弹起会在页面的下方留下一部分空白，当软键盘收起后，此段空白并不会消失，这就会使得后续操作的时候，导致有相对定位（fixed,absolute:相对于浏览器窗体）的节点发生位移，导致节点点击事件偏移而无法选中。</p>
+<p>找到问题后，bug就好解决了<br>解决思路：<br>复现该bug以后发现只要滚动一下页面就可以使页面恢复正常，于是就想可不可以在input失去焦点以后调用一下页面滚动，来完成该操作，发现果然可以。</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>hi , Daling。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2018/11/12/post30/">
+        三年之后 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 <footer>
